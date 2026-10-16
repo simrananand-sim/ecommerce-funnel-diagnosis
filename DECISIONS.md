@@ -49,3 +49,26 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
     start from November.
     Nov to Feb: both groups decline (new 2.76% to 1.95%, returning 4.41% to 3.70%); the new share is
     flat (33.4% to 32.4%), so the slide is not a mix effect. Cause unverified; no traffic-source data.
+16. October "new" labels are contaminated: the new-session cart rate falls from 47.7% (week of 1 Oct) to
+    28.8% (7 Oct) and 18.2% (14 Oct), then stays at about 17-19% through November. Customers who shopped
+    before 1 Oct look new until they return. Rule: new vs returning is read only from 14 Oct onward;
+    the overall "Oct cart rate 26.2%" is not used as a baseline. Weekly new-session totals reconcile to
+    the monthly new totals (713,633 for Oct+Nov).
+    New-user conversion is flat Oct to Nov (about 2.55-2.9% by week). Cause of the inflated early-October
+    carts (conversion unchanged) unverified.
+17. Weekly new vs returning (14 Oct to 29 Feb). Weekly new-session totals match the earlier
+    runs for the weeks both cover; the week of 25 Nov differs only because 5c stopped at 30 Nov.
+    New-user conversion falls from about 2.66% (14 Oct to 25 Nov, excluding the week of 18 Nov)
+    to about 2.33% (December) to about 2.05% (6 Jan to 24 Feb). The new-user cart rate steps
+    down from about 17.8% (week of 25 Nov) to 15.2% (week of 2 Dec) and stays at 13-15.5%.
+    Returning conversion changes little (about 4.1% to 3.85%).
+    The week of 18 Nov is a traffic surge (175k returning sessions vs about 125k).
+    The week of 30 Dec is a holiday week with the lowest new conversion (1.51%).
+    The cause of the December step is unverified (no traffic-source or promotion data).
+    Weekly averages are simple, not session-weighted.
+18. Daily new-user conversion, 18 Nov to 11 Dec: baseline 2.56-2.61% (18-20 Nov), peak 1 on 21-24 Nov
+    (up to 4.19% on 22 Nov), trough 25-27 Nov (2.08-2.14%), peak 2 on 28-30 Nov (up to 3.85%),
+    then 1.91-2.57% through 11 Dec. The shift down starts on 25 Nov, not in December; the weekly view
+    hid this because the week of 25 Nov mixes trough and peak-2 days. Cause unverified (no promotion
+    or traffic-source data); reported as descriptive. New-user conversion is about 2.6% before
+    and about 2.2-2.3% after.
