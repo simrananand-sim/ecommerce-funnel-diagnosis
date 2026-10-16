@@ -15,8 +15,8 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
 6. **Zero prices (104,157 rows, 0.5%):** price set to NULL, row kept (the behaviour is real),
    `price_was_zero = 1` added so the zeros can still be investigated.
    Only 1 of them is a purchase (Jan), so revenue is barely affected.
-   Spike: zero-price carts were 1,207 in Dec and 1,672 in Jan, then 43,423 in Feb. To investigate before
-   reading any February conversion change.
+   Spike: zero-price carts were 1,207 in Dec and 1,672 in Jan, then 43,423 in Feb. 
+   Investigated: the zero-price carts sit in 4,415 sessions (0.1% of all sessions). Excluding them changes monthly conversion by at most 0.02 points (Feb 3.13% either way), so they do not explain February’s decline. The Feb event spike came from under 2,000 sessions repeating the event. Cause unverified.
 7. **Result:** `events_clean` = 20,692,709 rows (20,692,840 minus 131).
    Checked: NULL prices = flagged zeros = 104,157.
 8. **Scale:** 1,639,358 users, 4,535,942 sessions (about 2.8 sessions per user).
@@ -31,7 +31,7 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
     Session conversion 3.43% (about 28:1, in line with published analyses of this dataset).
     Not strictly sequential: 20.0% of cart sessions have no view, 25.2% of purchase sessions have no view,
     18.8% of purchase sessions have no cart. Cause unverified (possibly a view or cart in an earlier session).
-12. Session conversion by month: Oct 3.40% | Nov 3.86% | Dec 3.42% | Jan 3.33% | Feb 3.14%.
+12. Session conversion by month: Oct 3.40% | Nov 3.86% | Dec 3.42% | Jan 3.33% | Feb 3.13%.
     The Dec "drop" in event counts was partly fewer sessions (-11%); at session level Dec is flat vs Oct.
     Nov is the outlier. Day-level (15 Nov-5 Dec): two peaks (21-24 Nov 4.80%, 28-30 Nov 4.55%) around a trough
     (25-27 Nov 2.82%). Black Friday (29 Nov) is not a single spike, so not used as a pre/post test.
@@ -40,7 +40,7 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
     273 sessions (0.006%) contain more than one user_id. Kept; each is assigned to its lowest user_id.
     Funnel metrics unaffected; user-level analysis carries this tiny caveat.    
 14. user_first built (1,638,877 users, first 2019-10-01 00:00:00, last 2020-02-29 23:57:23).
-    481 user_ids (0.03%) appear only inside multi-user sessions, so they have no row; their activity
+    481 user_ids (0.03%) most likely appear only inside multi-user sessions, so they have no row; their activity
     is counted under the lowest user_id of each session. No sessions are lost (join reconciles exactly
     to the monthly totals).
 15. New vs returning: a session is "new" if it starts at the user's first-ever session time.
@@ -72,3 +72,6 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
     hid this because the week of 25 Nov mixes trough and peak-2 days. Cause unverified (no promotion
     or traffic-source data); reported as descriptive. New-user conversion is about 2.6% before
     and about 2.2-2.3% after.
+19. Cart-to-purchase is measured within a single session. A shopper who saves a cart and buys in a later 
+    session counts as a drop-off, so within-session cart-to-purchase understates true completion.
+    Not tested.
