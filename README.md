@@ -10,6 +10,11 @@
    20,692,840 events, 1 Oct 2019 to 29 Feb 2020 (UTC), 1,639,358 users, 4,535,942 sessions.
    Raw files are not in this repo (too large); see the Kaggle link.
 
+   ## Dashboard
+   ![Overview](dashboard/page1_overview.png)
+   ![Shoppers](dashboard/page2_shoppers.png)
+   ![Diagnosis](dashboard/page3_diagnosis.png)
+
    **Known limitations**
       - No device, city or signup-date columns.
       - category_code is 98% empty, so category analysis uses category_id (500 IDs, no names).
