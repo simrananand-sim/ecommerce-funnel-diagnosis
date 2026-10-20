@@ -33,8 +33,9 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
     18.8% of purchase sessions have no cart. Cause unverified (possibly a view or cart in an earlier session).
 12. Session conversion by month: Oct 3.40% | Nov 3.86% | Dec 3.42% | Jan 3.33% | Feb 3.13%.
     The Dec "drop" in event counts was partly fewer sessions (-11%); at session level Dec is flat vs Oct.
-    Nov is the outlier. Day-level (15 Nov-5 Dec): two peaks (21-24 Nov 4.80%, 28-30 Nov 4.55%) around a trough
-    (25-27 Nov 2.82%). Black Friday (29 Nov) is not a single spike, so not used as a pre/post test.
+    Nov is the outlier. Day-level (15 Nov-5 Dec): two peaks (21-24 Nov average 4.80%, up to 5.4% on the best day;
+    28-30 Nov average 4.55%, up to 4.8%) around a trough (25-27 Nov average 2.82%). Black Friday (29 Nov) is not
+    a single spike, so not used as a pre/post test.
     No promotion data available; cause unverified.
 13. sessions_summary built (4,535,941 sessions, 155,617 with a purchase; matches the funnel).
     273 sessions (0.006%) contain more than one user_id. Kept; each is assigned to its lowest user_id.
@@ -47,8 +48,8 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
     1,980 sessions (0.04%) are ties (two sessions in the same second) and count as new.
     October labels are unreliable (data starts 1 Oct, so earlier customers look new); comparisons
     start from November.
-    Nov to Feb: both groups decline (new 2.76% to 1.95%, returning 4.41% to 3.70%); the new share is
-    flat (33.4% to 32.4%), so the slide is not a mix effect. Cause unverified; no traffic-source data.
+    the new share was flat from Nov to Feb (33.4% to 32.4%), and fell from 35.8% to 32.4% from Dec to Feb, 
+    which would have raised conversion, so mix does not explain the slide.
 16. October "new" labels are contaminated: the new-session cart rate falls from 47.7% (week of 1 Oct) to
     28.8% (7 Oct) and 18.2% (14 Oct), then stays at about 17-19% through November. Customers who shopped
     before 1 Oct look new until they return. Rule: new vs returning is read only from 14 Oct onward;
@@ -57,7 +58,7 @@ Raw table `events_raw` is never edited. All analysis uses `events_clean`.
     New-user conversion is flat Oct to Nov (about 2.55-2.9% by week). Cause of the inflated early-October
     carts (conversion unchanged) unverified.
 17. Weekly new vs returning (14 Oct to 29 Feb). Weekly new-session totals match the earlier
-    runs for the weeks both cover; the week of 25 Nov differs only because 5c stopped at 30 Nov.
+    runs for the weeks both cover; the week of 25 Nov differs only because an earlier run stopped at 30 Nov.
     New-user conversion falls from about 2.66% (14 Oct to 25 Nov, excluding the week of 18 Nov)
     to about 2.33% (December) to about 2.05% (6 Jan to 24 Feb). The new-user cart rate steps
     down from about 17.8% (week of 25 Nov) to 15.2% (week of 2 Dec) and stays at 13-15.5%.

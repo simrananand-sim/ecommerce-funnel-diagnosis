@@ -5,10 +5,17 @@
    **Success metric:** Session conversion = sessions with a purchase / all sessions (baseline 3.43%)
    **Tools:** MySQL, Power BI
 
+   **Finding in one line:** only 3.43% of sessions end in a purchase, and from December conversion fell about 8%, mainly after the cart, so checkout is the first place to look.
+
    ## Data
    REES46 "eCommerce events history in cosmetics shop" (Kaggle, mkechinov).
-   20,692,840 events, 1 Oct 2019 to 29 Feb 2020 (UTC), 1,639,358 users, 4,535,942 sessions.
-   Raw files are not in this repo (too large); see the Kaggle link.
+   20,692,840 events, 1 Oct 2019 to 29 Feb 2020 (UTC), 1,639,358 users, 4,535,942 sessions (4,535,941 after cleaning).
+   Raw files are not in this repo (too large). Download them from Kaggle: https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-cosmetics-shop
+
+   ## Repo contents
+   - `sql/funnel_full_log.sql`: full MySQL log (load, clean, sessions, new vs returning, checks, exports)
+   - `dashboard/`: Power BI file, three page screenshots, and the four CSVs the dashboard reads
+   - `DECISIONS.md`: every data-cleaning and analysis decision, in order
 
    ## Dashboard
    ![Overview](dashboard/page1_overview.png)
@@ -32,8 +39,7 @@
    ## Key findings
       - 3.43% of sessions end in a purchase. About 82% of sessions that view never add to cart, and about 87% of cart sessions don’t purchase.
       - November was the best month (3.86%), driven mostly by returning shoppers. Cause unknown.
-      - From December to February conversion fell about 8.5% (3.42% to 3.13%) in both new and returning shoppers. It’s not a mix effect (the new
-      share stayed about 33% to 32%).
+      - From December to February conversion fell about 8% (3.42% to 3.13%) in both new and returning shoppers. It's not a mix effect: the new share fell from 35.8% to 32.4%, which would have raised conversion.
       - From December on, cart rates were roughly flat while cart-to-purchase fell (returning 18.2% to 16.1%, new 15.3% to 13.8%). New shoppers’ cart rate also stepped down around 25 Nov to December.
 
    ## Recommendation (hypotheses, not proven)
