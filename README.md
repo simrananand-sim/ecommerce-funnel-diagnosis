@@ -23,13 +23,14 @@
    ![Diagnosis](Dashboard/page3_diagnosis.png)
 
    **Known limitations**
-      - No device, city or signup-date columns.
-      - category_code is 98% empty, so category analysis uses category_id (500 IDs, no names).
-      - brand is 42% empty.
-      - One order creates several purchase rows, so funnels count distinct sessions, not events.
-      - Cart-to-purchase is measured within a session.
-      - No promotion, price or traffic-source data, so causes are hypotheses.
-      - Early October “new” labels are unreliable.
+
+   - No device, city or signup-date columns.
+   - category_code is 98% empty, so category analysis uses category_id (500 IDs, no names).
+   - brand is 42% empty.
+   - One order creates several purchase rows, so funnels count distinct sessions, not events.
+   - Cart-to-purchase is measured within a session.
+   - No promotion, price or traffic-source data, so causes are hypotheses.
+   - Early October “new” labels are unreliable.
 
    ## Data cleaning
    Full log in DECISIONS.md. Summary: timestamps converted to DATETIME;
