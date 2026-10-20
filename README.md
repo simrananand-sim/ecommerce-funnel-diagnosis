@@ -18,9 +18,9 @@
    - `DECISIONS.md`: every data-cleaning and analysis decision, in order
 
    ## Dashboard
-   ![Overview](dashboard/page1_overview.png)
-   ![Shoppers](dashboard/page2_shoppers.png)
-   ![Diagnosis](dashboard/page3_diagnosis.png)
+   ![Overview](Dashboard/page1_overview.png)
+   ![Shoppers](Dashboard/page2_shoppers.png)
+   ![Diagnosis](Dashboard/page3_diagnosis.png)
 
    **Known limitations**
       - No device, city or signup-date columns.
